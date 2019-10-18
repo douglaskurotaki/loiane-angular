@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CursosService } from './cursos.service';
 
 @Component({
   selector: 'app-cursos',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cursos.component.css']
 })
 export class CursosComponent implements OnInit {
+	nomePortal: String;
+	cursos: String[];
 
-  constructor() { }
+  constructor(cursoServico: CursosService ) { 
+		this.nomePortal = 'http://google.com';
+		this.cursos =  cursoServico.getCursos();
+	}
 
   ngOnInit() {
-  }
+	}
+
+	
+	
+	
 
 }
