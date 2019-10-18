@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataBindingComponent implements OnInit {
 
+	url: String = 'http://google.com';
+	cursoAngular: Boolean = true;
+	urlImagem: 'http://lorempixel.com/400/200/nature/';
+
   constructor() { }
 
   ngOnInit() {
-  }
+	}
+	
+	getValor(){
+		return 1;
+	}
+
+	getCurtirCurso(){
+		return true;
+	}
 
 }
