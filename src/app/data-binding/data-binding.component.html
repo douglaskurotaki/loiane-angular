@@ -28,6 +28,11 @@
 				<option value="alert-danger">Erro</option>
 			</select>
 			<br><br>
+
+			<div class="alert {{ classe.value }}" role="alert">
+				Texto colorido conforme valor do combobox
+			</div>
+
 			<div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">
 				Sucesso
 			</div>
@@ -40,6 +45,12 @@
 			<div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">
 				Erro
 			</div>
+
+			<div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'"
+						[style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+				Erro
+			</div>
+			
 		</div>
 	</article>
 </section>
