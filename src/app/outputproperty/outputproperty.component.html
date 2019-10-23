@@ -1,5 +1,5 @@
 <div>
 	<button class="btn btn-primary" (click)="decrementa()">-</button>
-	<input type="text" readonly [value]="valor" #campoInput>		
+	<input type="text" readonly [value]="campoValorInput.nativeElement.value" #campoInput>		
 	<button class="btn btn-primary" (click)="incrementa()">+</button>	
 </div>
